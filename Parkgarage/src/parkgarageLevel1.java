@@ -2,27 +2,27 @@
 public class parkgarageLevel1 {
 
 	public static void main(String[] args) {
-		int parkplaetze = 10;
-		int autos = 4;
-		String parken = "6 2 -6 3 4 -3 -4 -2";
+		int parkplaetze = 100;
+		int cars = 20;
+		String parken = "19 -19 11 -11 1 -1 17 -17 10 7 -10 -7 3 14 -14 -3 13 -13 4 12 20 18 6 16 -18 -12 -16 5 -5 -20 -6 -4 8 15 -8 2 -15 9 -2 -9";
 		int max = 0;
-		int jetzt = 0;
+		int now = 0;
 		String[] parkvorgaenge = parken.split(" ");
 		
 		for(int i=0; i < parkvorgaenge.length; i++) 
 		{
 			if (Integer.parseInt(parkvorgaenge[i]) < 0)
 			{
-				jetzt -=1;
+				now -=1;
 			}
 			else
 			{
-				jetzt +=1;
+				now +=1;
 			}
 			
-			if (jetzt > max)
+			if (now > max)
 			{
-				max = jetzt;
+				max = now;
 			}
 		
 		}
